@@ -9,9 +9,9 @@ min.innerHTML=minCount;
 sec.innerHTML=secCount;
 function start(){
     secCount++;
-    if(secCount==3){
+    if(secCount==60){
         minCount++;
-        if (minCount==3) {
+        if (minCount==60) {
             hrCount++;
             minCount=0;
             secCount=0;
