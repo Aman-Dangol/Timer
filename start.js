@@ -5,9 +5,12 @@ var hrCount=0;
 var minCount =0;
 var secCount = 0;
 hr.innerHTML=0;
-min.innerHTML=minCount;
-sec.innerHTML=secCount;
+hr.innerHTML=hrCount.toString().padStart(2,'0');
+min.innerHTML=minCount.toString().padStart(2,'0');
+sec.innerHTML=secCount.toString().padStart(2,'0');
 function start(){
+    var secCountInNumber= secCount.toString().padStart(2,'0');
+    console.log("secCount", secCountInNumber)
     secCount++;
     if(secCount==60){
         minCount++;
@@ -15,19 +18,20 @@ function start(){
             hrCount++;
             minCount=0;
             secCount=0;
-        hr.innerHTML=hrCount; 
-        min.innerHTML=minCount;
-        sec.innerHTML=secCount;
+        hr.innerHTML=hrCount.toString().padStart(2,'0'); 
+        min.innerHTML=minCount.toString().padStart(2,'0');
+        sec.innerHTML=secCountInNumber.toString().padStart(2,'0');
 
-        }else
+        }
+        else
         {
         secCount=0;
-        min.innerHTML=minCount;
-        sec.innerHTML=secCount;
+        min.innerHTML=minCount.toString().padStart(2,'0');
+        sec.innerHTML=secCountInNumber;
         }
     }
     else{
-        sec.innerHTML=secCount;
+        sec.innerHTML=secCountInNumber;
 
     }
 }
